@@ -69,7 +69,7 @@ public class Connect {
 	 * @throws Exception HTTP Request Failed / Reading Request Failed
 	 */
 	public static boolean removeGameId() throws Exception {
-		URL url = new URL("https://notlord.com/connect/remove_host_id/");
+		URL url = new URL("https://notlord.com/connect/remove_host_id:"+getPublicIPv4()+"/");
 		HttpURLConnection con = (HttpURLConnection) url.openConnection();
 		con.setRequestMethod("GET");
 		con.connect();
